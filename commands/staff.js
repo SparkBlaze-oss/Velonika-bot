@@ -23,9 +23,13 @@ async function staffCommand(sock, chatId, msg) {
         const text = `
 ≡ *GROUP ADMINS* _${groupMetadata.subject}_
 
-┌─⊷ *ADMINS*
-▢ ${listAdmin}
-└───────────
+╭━〔 👑 𝗚𝗥𝗢𝗨𝗣 𝗔𝗗𝗠𝗜𝗡𝗦 〕━╮
+┃ 🛡️ 𝗔𝗨𝗧𝗛𝗢𝗥𝗜𝗭𝗘𝗗 𝗠𝗘𝗠𝗕𝗘𝗥𝗦
+┃
+┃ ✦ ${listAdmin}
+┃
+╰━━━━━━━━━━━━━━━━━━━━━━╯
+⚡ 𝗣𝗢𝗪𝗘𝗥𝗘𝗗 𝗕𝗬 𝗩𝗘𝗟𝗢𝗡𝗜𝗞𝗔 𝗕𝗢𝗧
 `.trim();
 
         // Send the message with image and mentions
