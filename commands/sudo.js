@@ -49,7 +49,6 @@ async function sudoCommand(sock, chatId, message) {
     if (sub === 'add') {
         const ok = await addSudo(targetJid);
         await sock.sendMessage(chatId, { text: ok ? `╭〔 👑 SUDO ACCESS GRANTED 〕━╮
-┃
 ┃  ✅ Status   : Successfully Added
 ┃  👤 Target   : ${targetJid}
 ┃  🛡️ Access   : Sudo Privileges
@@ -66,7 +65,6 @@ async function sudoCommand(sock, chatId, message) {
         }
         const ok = await removeSudo(targetJid);
         await sock.sendMessage(chatId, { text: ok ? `╭━━〔 🛡️ SUDO ACCESS REVOKED 〕━━━╮
-┃
 ┃  ❌ Status   : Successfully Demoted
 ┃  👤 Target   : ${targetJid}
 ┃  🔓 Privileges : Sudo Access Removed
