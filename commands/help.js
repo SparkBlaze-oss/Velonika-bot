@@ -9,7 +9,7 @@ async function helpCommand(sock, chatId, message) {
 ╠══════════════════════════════╣
 ║ *🤖 ${settings.botName || 'Velonika-Bot'}*  
 ║ 🟢 Version: *${settings.version || '3.0.0'}*
-║ 👑 by ${settings.botOwner || 'Spark Blaze'}
+║ 👑 Created by ${settings.botOwner || 'Spark Blaze'}
 ║ ✅ YT : ${global.ytch}
 ╚══════════════════════════════╝
 
