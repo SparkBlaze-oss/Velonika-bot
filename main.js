@@ -197,7 +197,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
 
             if (buttonId === 'channel') {
                 await sock.sendMessage(chatId, {
-                    text: '📢 *Join our Channel:*\nhttps://whatsapp.com/channel/0029VbDiiR2FcowAYq6bIB1m'
+                    text: '📢 *Velonika is online now:*\nhttps://whatsapp.com/channel/0029VbDiiR2FcowAYq6bIB1m'
                 }, { quoted: message });
                 return;
             } else if (buttonId === 'owner') {
