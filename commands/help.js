@@ -74,26 +74,52 @@ async function helpCommand(sock, chatId, message) {
 │ 🛡️ .setgpp <reply to image>
 ╰────────────────────────╯
 
-╭───〔 🔐 𝐎𝐖𝐍𝐄𝐑 〕───╮
+╭───〔 🎮 𝐆𝐀𝐌𝐄 𝐒𝐘𝐒𝐓𝐄𝐌 〕───╮
 │
-│ 🔐 .mode <public/private>
-│ 🔐 .clearsession
-│ 🔐 .antidelete
-│ 🔐 .cleartmp
-│ 🔐 .update
-│ 🔐 .settings
-│ 🔐 .setpp <reply to image>
-│ 🔐 .autoreact <on/off>
-│ 🔐 .autostatus <on/off>
-│ 🔐 .autostatus react <on/off>
-│ 🔐 .autotyping <on/off>
-│ 🔐 .autoread <on/off>
-│ 🔐 .anticall <on/off>
-│ 🔐 .pmblocker <on/off/status>
-│ 🔐 .pmblocker setmsg <text>
-│ 🔐 .setmention <reply to msg>
-│ 🔐 .mention <on/off>
+│ 🎮 .tictactoe @user
+│ 🎮 .hangman
+│ 🎮 .guess <letter>
+│ 🎮 .trivia
+│ 🎮 .answer <answer>
+│ 🎮 .truth
+│ 🎮 .dare
+╰──────────────────────────╯
+
+╭───〔 🎯 𝐅𝐔𝐍 𝐒𝐘𝐒𝐓𝐄𝐌 〕───╮
+│
+│ ✨ .compliment @user
+│ ✨ .insult @user
+│ ✨ .flirt
+│ ✨ .shayari
+│ ✨ .goodnight
+│ ✨ .roseday
+│ ✨ .character @user
+│ ✨ .wasted @user
+│ ✨ .ship @user
+│ ✨ .simp @user
+│ ✨ .stupid @user [text]
+╰──────────────────────────╯
+
+╭───〔 🧠 𝐀𝐈 𝐂𝐎𝐑𝐄 〕───╮
+│
+│ 🧠 .gpt <question>
+│ 🧠 .gemini <question>
+│ 🧠 .imagine <prompt>
+│ 🧠 .flux <prompt>
+│ 🧠 .sora <prompt>
 ╰────────────────────────╯
+
+╭───〔 📥 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑 〕───╮
+│
+│ 📥 .play <song_name>
+│ 📥 .song <song_name>
+│ 📥 .spotify <query>
+│ 📥 .instagram <link>
+│ 📥 .facebook <link>
+│ 📥 .tiktok <link>
+│ 📥 .video <song name>
+│ 📥 .ytmp4 <Link>
+╰──────────────────────────╯
 
 ╭───〔 🎨 𝐈𝐌𝐀𝐆𝐄 / 𝐒𝐓𝐈𝐂𝐊𝐄𝐑 〕───╮
 │
@@ -121,41 +147,6 @@ async function helpCommand(sock, chatId, message) {
 │ ◇ .hijab
 ╰───────────────────╯
 
-╭───〔 🎮 𝐆𝐀𝐌𝐄 𝐒𝐘𝐒𝐓𝐄𝐌 〕───╮
-│
-│ 🎮 .tictactoe @user
-│ 🎮 .hangman
-│ 🎮 .guess <letter>
-│ 🎮 .trivia
-│ 🎮 .answer <answer>
-│ 🎮 .truth
-│ 🎮 .dare
-╰──────────────────────────╯
-
-╭───〔 🧠 𝐀𝐈 𝐂𝐎𝐑𝐄 〕───╮
-│
-│ 🧠 .gpt <question>
-│ 🧠 .gemini <question>
-│ 🧠 .imagine <prompt>
-│ 🧠 .flux <prompt>
-│ 🧠 .sora <prompt>
-╰────────────────────────╯
-
-╭───〔 🎯 𝐅𝐔𝐍 𝐒𝐘𝐒𝐓𝐄𝐌 〕───╮
-│
-│ ✨ .compliment @user
-│ ✨ .insult @user
-│ ✨ .flirt
-│ ✨ .shayari
-│ ✨ .goodnight
-│ ✨ .roseday
-│ ✨ .character @user
-│ ✨ .wasted @user
-│ ✨ .ship @user
-│ ✨ .simp @user
-│ ✨ .stupid @user [text]
-╰──────────────────────────╯
-
 ╭───〔 🔤 𝐓𝐄𝐗𝐓𝐌𝐀𝐊𝐄𝐑 〕───╮
 │
 │ ◈ .metallic <text>
@@ -178,17 +169,26 @@ async function helpCommand(sock, chatId, message) {
 │ ◈ .fire <text>
 ╰────────────────────────╯
 
-╭───〔 📥 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑 〕───╮
+╭───〔 🔐 𝐎𝐖𝐍𝐄𝐑 〕───╮
 │
-│ 📥 .play <song_name>
-│ 📥 .song <song_name>
-│ 📥 .spotify <query>
-│ 📥 .instagram <link>
-│ 📥 .facebook <link>
-│ 📥 .tiktok <link>
-│ 📥 .video <song name>
-│ 📥 .ytmp4 <Link>
-╰──────────────────────────╯
+│ 🔐 .mode <public/private>
+│ 🔐 .clearsession
+│ 🔐 .antidelete
+│ 🔐 .cleartmp
+│ 🔐 .update
+│ 🔐 .settings
+│ 🔐 .setpp <reply to image>
+│ 🔐 .autoreact <on/off>
+│ 🔐 .autostatus <on/off>
+│ 🔐 .autostatus react <on/off>
+│ 🔐 .autotyping <on/off>
+│ 🔐 .autoread <on/off>
+│ 🔐 .anticall <on/off>
+│ 🔐 .pmblocker <on/off/status>
+│ 🔐 .pmblocker setmsg <text>
+│ 🔐 .setmention <reply to msg>
+│ 🔐 .mention <on/off>
+╰────────────────────────╯
 
 ╭───〔 🧩 𝐌𝐈𝐒𝐂 〕───╮
 │
