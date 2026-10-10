@@ -125,7 +125,10 @@ async function warnCommand(sock, chatId, senderId, mentionedJids, message) {
         } catch (error) {
             console.error('Error in warn command:', error);
             await sock.sendMessage(chatId, { 
-                text: '❌ Failed to warn user!'
+                text: '╭━〔 ⚠️ 𝐌𝐎𝐃𝐄𝐑𝐀𝐓𝐈𝐎𝐍 𝐅𝐀𝐈𝐋𝐄𝐃 〕━━━╮
+┃ ❌ 𝐖𝐚𝐫𝐧𝐢𝐧𝐠 𝐍𝐨𝐭 𝐈𝐬𝐬𝐮𝐞𝐝
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
+⚡ 𝐕𝐄𝐋𝐎𝐍𝐈𝐊𝐀 𝐁𝐎𝐓 • 𝐂𝐑𝐄𝐀𝐓𝐄𝐃 𝐁𝐘 𝐒𝐏𝐀𝐑𝐊 𝐁𝐋𝐀𝐙𝐄 🔥'
             });
         }
     } catch (error) {
@@ -142,7 +145,12 @@ async function warnCommand(sock, chatId, senderId, mentionedJids, message) {
         } else {
             try {
                 await sock.sendMessage(chatId, { 
-                    text: '❌ Failed to warn user. Make sure the bot is admin and has sufficient permissions.'
+                    text: '╭━〔 ⚠️ 𝐌𝐎𝐃𝐄𝐑𝐀𝐓𝐈𝐎𝐍 𝐅𝐀𝐈𝐋𝐄𝐃 〕━━━╮
+┃ ❌ 𝐖𝐚𝐫𝐧𝐢𝐧𝐠 𝐍𝐨𝐭 𝐈𝐬𝐬𝐮𝐞𝐝
+┃ 🛡️ Ensure the bot is an admin with sufficient
+┃ permissions.
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
+⚡ 𝐕𝐄𝐋𝐎𝐍𝐈𝐊𝐀 𝐁𝐎𝐓 • 𝐂𝐑𝐄𝐀𝐓𝐄𝐃 𝐁𝐘 𝐒𝐏𝐀𝐑𝐊 𝐁𝐋𝐀𝐙𝐄 🔥.'
                 });
             } catch (sendError) {
                 console.error('Error sending error message:', sendError);
