@@ -204,7 +204,11 @@ async function updateCommand(sock, chatId, message, zipOverride) {
     }
     try {
         // Minimal UX
-        await sock.sendMessage(chatId, { text: '🔄 Updating the bot, please wait…' }, { quoted: message });
+        await sock.sendMessage(chatId, { text: '╭━━〔 ⚙️ 𝐒𝐘𝐒𝐓𝐄𝐌 𝐔𝐏𝐃𝐀𝐓𝐄 〕━━╮
+┃ 🔄 𝐔𝐩𝐝𝐚𝐭𝐞 𝐈𝐧 𝐏𝐫𝐨𝐠𝐫𝐞𝐬𝐬...
+┃ ⏳ Please wait while the system initializes.
+╰━━━━━━━━━━━━━━━━━━━━━━╯
+✦ 𝐕𝐄𝐋𝐎𝐍𝐈𝐊𝐀 𝐁𝐎𝐓 • 𝐒𝐏𝐀𝐑𝐊 𝐁𝐋𝐀𝐙𝐄 ⚡' }, { quoted: message });
         if (await hasGitRepo()) {
             // silent
             const { oldRev, newRev, alreadyUpToDate, commits, files } = await updateViaGit();
