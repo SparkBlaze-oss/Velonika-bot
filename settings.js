@@ -2,8 +2,8 @@ const settings = {
   packname: 'Velonika Bot',
   author: '‎Spark Balze',
   botName: "Velonika Bot",
-  botOwner: 'Spark Blaze', // Your name
-  ownerNumber: '919907049024','917501525997'
+  botOwner: 'Spark Blaze',
+  ownerNumber: '919907049024','917501525997',
   giphyApiKey: 'qnl7ssQChTdPjsKta2Ax2LMaGXz303tq',
   commandMode: "private",
   maxStoreMessages: 20, 
