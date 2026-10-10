@@ -147,7 +147,7 @@ const soraCommand = require('./commands/sora');
 global.packname = settings.packname;
 global.author = settings.author;
 global.channelLink = "https://whatsapp.com/channel/0029VbDiiR2FcowAYq6bIB1m";
-global.ytch = "Spark Blaze";
+global.Creator = "Spark Blaze";
 
 // Add this near the top of main.js with other global configurations
 const channelInfo = {
