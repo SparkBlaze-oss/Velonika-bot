@@ -29,11 +29,20 @@ async function pingCommand(sock, chatId, message) {
         const uptimeFormatted = formatTime(uptimeInSeconds);
 
         const botInfo = `
-┏━━〔 🤖 𝐊𝐧𝐢𝐠𝐡𝐭𝐁𝐨𝐭-𝐌𝐃 〕━━┓
-┃ 🚀 Ping     : ${ping} ms
-┃ ⏱️ Uptime   : ${uptimeFormatted}
-┃ 🔖 Version  : v${settings.version}
-┗━━━━━━━━━━━━━━━━━━━┛`.trim();
+╔══════════════════════════╗
+𓆩 𝐕𝐄𝐋𝐎𝐍𝐈𝐊𝐀 𝐁𝐎𝐓 𓆪
+╚══════════════════════════╝
+
+◈ 𝐒𝐘𝐒𝐓𝐄𝐌 𝐒𝐓𝐀𝐓𝐔𝐒 𝐏𝐀𝐍𝐄𝐋
+
+🟢  Status    : ONLINE
+⚡  Ping      : ${ping} ms
+⏳  Uptime    : ${uptimeFormatted}
+🛡️  Version   : v${settings.version}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+♛  𝐒𝐘𝐒𝐓𝐄𝐌 𝐀𝐂𝐓𝐈𝐕𝐄
+━━━━━━━━━━━━━━━━━━━━━━━━━━`.trim();
 
         // Reply to the original message with the bot info
         await sock.sendMessage(chatId, { text: botInfo},{ quoted: message });

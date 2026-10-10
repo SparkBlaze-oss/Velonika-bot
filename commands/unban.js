@@ -11,11 +11,21 @@ async function unbanCommand(sock, chatId, message) {
         const senderId = message.key.participant || message.key.remoteJid;
         const { isSenderAdmin, isBotAdmin } = await isAdmin(sock, chatId, senderId);
         if (!isBotAdmin) {
-            await sock.sendMessage(chatId, { text: 'Please make the bot an admin to use .unban', ...channelInfo }, { quoted: message });
+            await sock.sendMessage(chatId, { text: '╭━━〔 ⚠️ 𝐀𝐃𝐌𝐈𝐍 𝐑𝐄𝐐𝐔𝐈𝐑𝐄𝐃 〕━━╮
+┃ 🤖 Promote the bot to Group Admin
+┃ 🔓 Required to use ".unban"
+┃ ⚙️ ACTION: Grant Admin Access
+╰━━━━━━━━━━━━━━━━━━━━━━╯
+✦ 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐕𝐄𝐋𝐎𝐍𝐈𝐊𝐀 𝐁𝐎𝐓', ...channelInfo }, { quoted: message });
             return;
         }
         if (!isSenderAdmin && !message.key.fromMe) {
-            await sock.sendMessage(chatId, { text: 'Only group admins can use .unban', ...channelInfo }, { quoted: message });
+            await sock.sendMessage(chatId, { text: '╭━━〔 ⚠️ 𝐀𝐃𝐌𝐈𝐍 𝐑𝐄𝐐𝐔𝐈𝐑𝐄𝐃 〕━━╮
+┃ 🤖 Promote the bot to Group Admin
+┃ 🔓 Required to use ".unban"
+┃ ⚙️ ACTION: Grant Admin Access
+╰━━━━━━━━━━━━━━━━━━━━━━╯
+✦ 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐕𝐄𝐋𝐎𝐍𝐈𝐊𝐀 𝐁𝐎𝐓', ...channelInfo }, { quoted: message });
             return;
         }
     } else {
@@ -39,7 +49,12 @@ async function unbanCommand(sock, chatId, message) {
     
     if (!userToUnban) {
         await sock.sendMessage(chatId, { 
-            text: 'Please mention the user or reply to their message to unban!', 
+            text: '╭━〔 ⚠️ 𝐔𝐍𝐁𝐀𝐍 𝐑𝐄𝐐𝐔𝐄𝐒𝐓 〕━━╮
+┃ Please mention the user or
+┃ reply to their message to proceed.
+┃
+┃ ➤ 𝐀𝐜𝐭𝐢𝐨𝐧: Identify the target user.
+╰━━━━━━━━━━━━━━━━━━━━━╯', 
             ...channelInfo 
         }, { quoted: message });
         return;
@@ -53,13 +68,23 @@ async function unbanCommand(sock, chatId, message) {
             fs.writeFileSync('./data/banned.json', JSON.stringify(bannedUsers, null, 2));
             
             await sock.sendMessage(chatId, { 
-                text: `Successfully unbanned ${userToUnban.split('@')[0]}!`,
+                text: `╭━━━〔 🛡️ 𝐔𝐍𝐁𝐀𝐍 𝐒𝐔𝐂𝐂𝐄𝐒𝐒 〕━━━╮
+┃  ✅ 𝐔𝐬𝐞𝐫 𝐔𝐧𝐛𝐚𝐧𝐧𝐞𝐝 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲
+┃  👤 𝐔𝐬𝐞𝐫 : @${userToUnban.split('@')[0]}
+┃  📋 𝐒𝐭𝐚𝐭𝐮𝐬 : 🟢 𝐔𝐍𝐁𝐀𝐍𝐍𝐄𝐃
+╰━━━━━━━━━━━━━━━━━━━━━━━━╯
+⚙️ 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 𝐕𝐄𝐋𝐎𝐍𝐈𝐊𝐀 𝐁𝐎𝐓`,
                 mentions: [userToUnban],
                 ...channelInfo 
             });
         } else {
             await sock.sendMessage(chatId, { 
-                text: `${userToUnban.split('@')[0]} is not banned!`,
+                text: `╭━━━〔 🛡️ 𝐔𝐍𝐁𝐀𝐍 𝐒𝐔𝐂𝐂𝐄𝐒𝐒 〕━━━╮
+┃  ✅ 𝐔𝐬𝐞𝐫 𝐔𝐧𝐛𝐚𝐧𝐧𝐞𝐝 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲
+┃  👤 𝐔𝐬𝐞𝐫 : @${userToUnban.split('@')[0]}
+┃  📋 𝐒𝐭𝐚𝐭𝐮𝐬 : 🟢 𝐔𝐍𝐁𝐀𝐍𝐍𝐄𝐃
+╰━━━━━━━━━━━━━━━━━━━━━━━━╯
+⚙️ 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 𝐕𝐄𝐋𝐎𝐍𝐈𝐊𝐀 𝐁𝐎𝐓`,
                 mentions: [userToUnban],
                 ...channelInfo 
             });

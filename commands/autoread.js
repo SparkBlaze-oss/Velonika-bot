@@ -1,5 +1,5 @@
 /**
- * Knight Bot - A WhatsApp Bot
+ * Velonika Bot - A WhatsApp Bot
  * Autoread Command - Automatically read all messages
  */
 
@@ -31,8 +31,8 @@ async function autoreadCommand(sock, chatId, message) {
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
-                        newsletterName: 'KnightBot MD',
+                        newsletterJid: '0029VbDiiR2FcowAYq6bIB1m@newsletter',
+                        newsletterName: 'Velonika bot',
                         serverMessageId: -1
                     }
                 }
@@ -62,8 +62,8 @@ async function autoreadCommand(sock, chatId, message) {
                         forwardingScore: 1,
                         isForwarded: true,
                         forwardedNewsletterMessageInfo: {
-                            newsletterJid: '120363161513685998@newsletter',
-                            newsletterName: 'KnightBot MD',
+                            newsletterJid: '0029VbDiiR2FcowAYq6bIB1m@newsletter',
+                            newsletterName: 'Velonika bot',
                             serverMessageId: -1
                         }
                     }
@@ -85,8 +85,8 @@ async function autoreadCommand(sock, chatId, message) {
                 forwardingScore: 1,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363161513685998@newsletter',
-                    newsletterName: 'KnightBot MD',
+                    newsletterJid: '0029VbDiiR2FcowAYq6bIB1m@newsletter',
+                    newsletterName: 'Velonika bot',
                     serverMessageId: -1
                 }
             }
@@ -100,8 +100,8 @@ async function autoreadCommand(sock, chatId, message) {
                 forwardingScore: 1,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363161513685998@newsletter',
-                    newsletterName: 'KnightBot MD',
+                    newsletterJid: '0029VbDiiR2FcowAYq6bIB1m@newsletter',
+                    newsletterName: 'Velonika bot',
                     serverMessageId: -1
                 }
             }
@@ -155,7 +155,7 @@ function isBotMentionedInMessage(message, botNumber) {
         }
         
         // Check for bot name mentions (optional, can be customized)
-        const botNames = [global.botname?.toLowerCase(), 'bot', 'knight', 'knight bot'];
+        const botNames = [global.botname?.toLowerCase(), 'bot', 'Velonika', 'Velonika bot'];
         const words = textContent.toLowerCase().split(/\s+/);
         if (botNames.some(name => words.includes(name))) {
             return true;

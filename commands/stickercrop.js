@@ -36,8 +36,8 @@ async function stickercropCommand(sock, chatId, message) {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363161513685998@newsletter',
-                    newsletterName: 'KnightBot MD',
+                    newsletterJid: '0029VbDiiR2FcowAYq6bIB1m@newsletter',
+                    newsletterName: 'Velonika bot',
                     serverMessageId: -1
                 }
             }
@@ -58,8 +58,8 @@ async function stickercropCommand(sock, chatId, message) {
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
-                        newsletterName: 'KnightBot MD',
+                        newsletterJid: '0029VbDiiR2FcowAYq6bIB1m@newsletter',
+                        newsletterName: 'Velonika bot',
                         serverMessageId: -1
                     }
                 }
@@ -104,7 +104,7 @@ async function stickercropCommand(sock, chatId, message) {
             }
         } else {
             // Image: standard compression
-            ffmpegCommand = `ffmpeg -i "${tempInput}" -vf "crop=min(iw\\,ih):min(iw\\,ih),scale=512:512,format=rgba" -c:v libwebp -preset default -loop 0 -vsync 0 -pix_fmt yuva420p -quality 75 -compression_level 6 "${tempOutput}"`;
+a            ffmpegCommand = `ffmpeg -i "${tempInput}" -vf "crop=min(iw\\,ih):min(iw\\,ih),scale=512:512,format=rgba" -c:v libwebp -preset default -loop 0 -vsync 0 -pix_fmt yuva420p -quality 75 -compression_level 6 "${tempOutput}"`;
         }
 
         await new Promise((resolve, reject) => {
@@ -135,7 +135,7 @@ async function stickercropCommand(sock, chatId, message) {
         
         // Check final file size
         const finalSizeKB = webpBuffer.length / 1024;
-        console.log(`Final sticker size: ${Math.round(finalSizeKB)} KB`);
+        console.log(`Final sticker size: ${Math.round(finalSizeKB)} 0`);
         
         // If still too large, we'll send it anyway but log a warning
         if (finalSizeKB > 1000) { // 1MB limit for WhatsApp stickers
@@ -149,7 +149,7 @@ async function stickercropCommand(sock, chatId, message) {
         // Create metadata
         const json = {
             'sticker-pack-id': crypto.randomBytes(32).toString('hex'),
-            'sticker-pack-name': settings.packname || 'KnightBot',
+            'sticker-pack-name': settings.packname || 'Velonia bot',
             'emojis': ['✂️']
         };
 
@@ -186,8 +186,8 @@ async function stickercropCommand(sock, chatId, message) {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363161513685998@newsletter',
-                    newsletterName: 'KnightBot MD',
+                    newsletterJid: '0029VbDiiR2FcowAYq6bIB1m@newsletter',
+                    newsletterName: 'Velonika bot',
                     serverMessageId: -1
                 }
             }
@@ -235,7 +235,7 @@ async function stickercropFromBuffer(inputBuffer, isAnimated) {
     await img.load(webpBuffer);
     const json = {
         'sticker-pack-id': crypto.randomBytes(32).toString('hex'),
-        'sticker-pack-name': settings.packname || 'KnightBot',
+        'sticker-pack-name': settings.packname || 'Velonia bot',
         'emojis': ['✂️']
     };
     const exifAttr = Buffer.from([0x49, 0x49, 0x2A, 0x00, 0x08, 0x00, 0x00, 0x00, 0x01, 0x00, 0x41, 0x57, 0x07, 0x00, 0x00, 0x00, 0x00, 0x00, 0x16, 0x00, 0x00, 0x00]);

@@ -48,7 +48,12 @@ async function sudoCommand(sock, chatId, message) {
 
     if (sub === 'add') {
         const ok = await addSudo(targetJid);
-        await sock.sendMessage(chatId, { text: ok ? `✅ Added sudo: ${targetJid}` : '❌ Failed to add sudo' },{quoted :message});
+        await sock.sendMessage(chatId, { text: ok ? `╭〔 👑 SUDO ACCESS GRANTED 〕━╮
+┃  ✅ Status   : Successfully Added
+┃  👤 Target   : ${targetJid}
+┃  🛡️ Access   : Sudo Privileges
+╰━━━━━━━━━━━━━━━━━━━━━━╯
+✨ Powered by VELONIKA BOT` : '❌ Failed to add sudo' },{quoted :message});
         return;
     }
 
@@ -59,7 +64,13 @@ async function sudoCommand(sock, chatId, message) {
             return;
         }
         const ok = await removeSudo(targetJid);
-        await sock.sendMessage(chatId, { text: ok ? `✅ Removed sudo: ${targetJid}` : '❌ Failed to remove sudo' },{quoted :message});
+        await sock.sendMessage(chatId, { text: ok ? `╭━━〔 🛡️ SUDO ACCESS REVOKED 〕━━━╮
+┃  ❌ Status   : Successfully Demoted
+┃  👤 Target   : ${targetJid}
+┃  🔓 Privileges : Sudo Access Removed
+┃  👨‍💻 Authorized By : ${senderName}
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯
+✨ Powered by VELONIKA BOT` : '❌ Failed to remove sudo' },{quoted :message});
         return;
     }
 }

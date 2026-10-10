@@ -50,7 +50,7 @@ function downloadFile(url, dest, visited = new Set()) {
             const client = useHttps ? require('https') : require('http');
             const req = client.get(url, {
                 headers: {
-                    'User-Agent': 'KnightBot-Updater/1.0',
+                    'User-Agent': 'velonikaBot-Updater/1.0',
                     'Accept': '*/*'
                 }
             }, res => {
@@ -176,7 +176,11 @@ async function updateViaZip(sock, chatId, message, zipOverride) {
 
 async function restartProcess(sock, chatId, message) {
     try {
-        await sock.sendMessage(chatId, { text: '✅ Update complete! Restarting…' }, { quoted: message });
+        await sock.sendMessage(chatId, { text: '╭━〔 ⚡ 𝐒𝐘𝐒𝐓𝐄𝐌 𝐔𝐏𝐃𝐀𝐓𝐄 〕━━╮
+┃  ✅ 𝐔𝐩𝐝𝐚𝐭𝐞 𝐃𝐞𝐩𝐥𝐨𝐲𝐞𝐝 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲
+┃  ⚙️ 𝐑𝐞𝐬𝐭𝐚𝐫𝐭𝐢𝐧𝐠 𝐒𝐲𝐬𝐭𝐞𝐦...
+╰━━━━━━━━━━━━━━━━━━━━╯
+✦ 𝐕𝐄𝐋𝐎𝐍𝐈𝐊𝐀 𝐁𝐎𝐓 • 𝐂𝐑𝐄𝐀𝐓𝐄𝐃 𝐁𝐘 𝐒𝐏𝐀𝐑𝐊 𝐁𝐋𝐀𝐙𝐄 ⚡' }, { quoted: message });
     } catch {}
     try {
         // Preferred: PM2
@@ -200,7 +204,11 @@ async function updateCommand(sock, chatId, message, zipOverride) {
     }
     try {
         // Minimal UX
-        await sock.sendMessage(chatId, { text: '🔄 Updating the bot, please wait…' }, { quoted: message });
+        await sock.sendMessage(chatId, { text: '╭━━〔 ⚙️ 𝐒𝐘𝐒𝐓𝐄𝐌 𝐔𝐏𝐃𝐀𝐓𝐄 〕━━╮
+┃ 🔄 𝐔𝐩𝐝𝐚𝐭𝐞 𝐈𝐧 𝐏𝐫𝐨𝐠𝐫𝐞𝐬𝐬...
+┃ ⏳ Please wait while the system initializes.
+╰━━━━━━━━━━━━━━━━━━━━━━╯
+✦ 𝐕𝐄𝐋𝐎𝐍𝐈𝐊𝐀 𝐁𝐎𝐓 • 𝐒𝐏𝐀𝐑𝐊 𝐁𝐋𝐀𝐙𝐄 ⚡' }, { quoted: message });
         if (await hasGitRepo()) {
             // silent
             const { oldRev, newRev, alreadyUpToDate, commits, files } = await updateViaGit();
@@ -215,7 +223,11 @@ async function updateCommand(sock, chatId, message, zipOverride) {
         }
         try {
             const v = require('../settings').version || '';
-            await sock.sendMessage(chatId, { text: `✅ Update done. Restarting…` }, { quoted: message });
+            await sock.sendMessage(chatId, { text: `╭━━〔 ⚡ 𝐒𝐘𝐒𝐓𝐄𝐌 〕━━━━╮
+┃ ✅ 𝐔𝐏𝐃𝐀𝐓𝐄 𝐂𝐎𝐌𝐏𝐋𝐄𝐓𝐄
+┃ 🔄 𝐑𝐄𝐒𝐓𝐀𝐑𝐓𝐈𝐍𝐆...
+╰━━━━━━━━━━━━━━━━━━╯
+✦ 𝐕𝐄𝐋𝐎𝐍𝐈𝐊𝐀 𝐁𝐎𝐓 • 𝐒𝐏𝐀𝐑𝐊 𝐁𝐋𝐀𝐙𝐄 ⚡` }, { quoted: message });
         } catch {
             await sock.sendMessage(chatId, { text: '✅ Restared Successfully\n Type .ping to check latest version.' }, { quoted: message });
         }
